@@ -138,10 +138,10 @@ def process_audio_to_text(audio_path):
         return
     yield "**Processing…** Transcribing the audio..."
     transcript = transcribe_audio(audio_path)
-    yield "**Processing..** Loading the model and generating minutes..."
+    yield "**Processing..** Loading the text model and generating minutes..."
     messages = use_messages(transcript)
 
-    header = "✅ **Transcription complete.\n\n"
+    header = "**Transcription complete.\n\n"
     buf = header
     for chunk in stream_minutes(messages):
         buf += chunk
