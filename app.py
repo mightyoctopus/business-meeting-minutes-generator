@@ -27,7 +27,7 @@ LLAMA = "meta-llama/Llama-3.1-8B-Instruct"
 
 HF_TOKEN = os.getenv("HF_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-assert OPENAI_API_KEY, "Set OPENAI_API_KEY in Space settings"
+assert OPENAI_API_KEY, "OpenAI API key not found. Set OPENAI_API_KEY in Space settings first."
 
 if HF_TOKEN:
     login(HF_TOKEN, add_to_git_credential=True)
